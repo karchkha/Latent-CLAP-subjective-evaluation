@@ -78,7 +78,20 @@ The average subjective ratings reveal that the Latent CLAP loss model outscored 
 The lower ratings for the ground truth samples is unexpected and could be attributed to the fact that real-world recordings often contain extraneous noises or recording artifacts. Our generated audio presents cleaner sounds with features that are more distinctly aligned with the target class, offering a potentially clearer representation of the intended sound event, which may contribute to higher scores in human evaluations.
 
 
-[Listen to the audio](https://github.com/karchkha/Latent-CLAP-subjective-evaluation/main/audios/Baseline/DogBark/waveform_0.wav)
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Audio Example</title>
+</head>
+<body>
+    <h1>Listen to Our Audio</h1>
+    <audio controls>
+        <source src="/audios/Baseline/DogBark/waveform_0.wav" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</body>
+</html>
+
 
 
 ## References
