@@ -56,14 +56,22 @@ The table below shows the class-specific class relevance ratings.
 
 The summary table provides an overall average rating for quality and relevance.
 
-| Condition              | GT  | LDM + Tuning | LDM + Tuning + Latent |
-|------------------------|-----|--------------|-----------------------|
-| Fit                    | 6.03| 6.55         | 7.03                  |
-| Quality                | 5.55| 6.00         | 6.40                  |
-
+| Model                           | Audio quality | Class relevance |
+|---------------------------------|---------------|-----------------|
+| Ground Truth                    | 5.55          | 6.03            |
+| LDM + Tuning  [1]               | 6.00          | 6.55            |
+| **LDM + Tuning + Latent**       | **6.40**      | **7.03**        |
 
 
 
 The average subjective ratings reveal that the Latent CLAP loss model outscored the baseline model and ground truth samples in both audio quality and category fitness. A mixed-design ANOVA showed that the main effect of model was significant for both audio quality ($F$(1.9,509.6) = 115.3, $p$ $<$ .001, $\eta_{p}^{2}$ = .3) and category fit ($F$(1.9,522) = 156.6, $p$ $<$ .001, $\eta_{p}^{2}$ = .36), while post-hoc paired t-tests with Bonferroni corrections further support the finding that the proposed model was rated significantly higher than both the baseline model and ground truth samples across both items ($p$ $<$ .001 for all comparisons). 
 
 The lower ratings for the ground truth samples is unexpected and could be attributed to the fact that real-world recordings often contain extraneous noises or recording artifacts. Our generated audio presents cleaner sounds with features that are more distinctly aligned with the target class, offering a potentially clearer representation of the intended sound event, which may contribute to higher scores in human evaluations.
+
+
+## References
+
+[1] Y. Yuan, H. Liu, X. Liu, X. Kang, M. D. Plumbley, and W. Wang,
+“Latent diffusion model based foley sound generation system for dcase
+challenge 2023 task 7,” arXiv:2305.15905, 2023.
+
