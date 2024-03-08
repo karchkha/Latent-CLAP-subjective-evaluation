@@ -82,5 +82,5 @@ The lower ratings for the ground truth samples is unexpected and could be attrib
 
 [1] Y. Yuan, H. Liu, X. Liu, X. Kang, M. D. Plumbley, and W. Wang,
 “Latent diffusion model based foley sound generation system for dcase
-challenge 2023 task 7,” arXiv:2305.15905, 2023
+challenge 2023 task 7,” arXiv:2305.15905, 2023.
 
