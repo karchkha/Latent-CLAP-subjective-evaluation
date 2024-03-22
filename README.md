@@ -24,7 +24,7 @@ Corresponds to the model name from the paper.
 + `Laten_CLAP` -> Proposed model (LDM + Tuning + Latent)
 
 
-Each folder contains three 16kHz `.wav` files.
+Each folder contains 15 audio sampeles of 16kHz `.wav` files.
 
 ## Subjective Evaluation
 
