@@ -1,6 +1,6 @@
 # Latent CLAP Loss for Better Foley Sound Synthesis
 
-Audio samples for the paper "_[Latent CLAP Loss for Better Foley Sound Synthesis](arxiv link here)_".
+Audio samples for the paper "_[Latent CLAP Loss for Better Foley Sound Synthesis](https://arxiv.org/abs/2403.12182)_".
 
 ## Abstract
 
