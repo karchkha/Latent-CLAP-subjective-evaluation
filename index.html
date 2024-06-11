@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Files</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .folder {
+            margin-bottom: 30px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 5px 5px rgba(46, 43, 43, 0.1);
+        }
+        .folder h2 {
+            background-color: #3c3c3c;
+            padding: 15px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            font-size: 2.5em;
+            margin: -10px -10px 10px -10px;
+            text-align: center; /* Center the text */
+            color: white; /* Optional: change text color for better contrast */
+        }
+        .class {
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        .class h3 {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        .audio-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+        }
+        audio {
+            margin: 5px 0;
+            width: 100%;
+            max-width: 300px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="audio-container"></div>
+
+    <script>
+        fetch('audioFiles.json')
+            .then(response => response.json())
+            .then(data => {
+                const audioContainer = document.getElementById('audio-container');
+
+                for (const folder in data) {
+                    const folderDiv = document.createElement('div');
+                    folderDiv.classList.add('folder');
+                    folderDiv.innerHTML = `<h2>${folder}</h2>`;
+
+                    for (const cls in data[folder]) {
+                        const classDiv = document.createElement('div');
+                        classDiv.classList.add('class');
+                        classDiv.innerHTML = `<h3>${cls}</h3>`;
+
+                        const audioContainerDiv = document.createElement('div');
+                        audioContainerDiv.classList.add('audio-container');
+
+                        data[folder][cls].forEach(audioFile => {
+                            const audio = document.createElement('audio');
+                            audio.controls = true;
+                            audio.src = `audios/${folder}/${cls}/${audioFile}`;
+                            audioContainerDiv.appendChild(audio);
+                        });
+
+                        classDiv.appendChild(audioContainerDiv);
+                        folderDiv.appendChild(classDiv);
+                    }
+
+                    audioContainer.appendChild(folderDiv);
+                }
+            })
+            .catch(error => console.error('Error loading audio files:', error));
+    </script>
+</body>
+</html>
