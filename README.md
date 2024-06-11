@@ -1,8 +1,10 @@
 # Latent CLAP Loss for Better Foley Sound Synthesis
 
-Audio samples for the paper "_[Latent CLAP Loss for Better Foley Sound Synthesis](https://arxiv.org/abs/2403.12182)_".
+Audio samples and subjective evaluation for the paper: "_[Latent CLAP Loss for Better Foley Sound Synthesis](https://arxiv.org/abs/2403.12182)_".
 
-<span style="color: red; font-weight: bold;">Listen to Audios:</span> [![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-blue?logo=github)](https://karchkha.github.io/Latent-CLAP-subjective-evaluation/)
+### <strong>Listen to Audios</strong>
+
+Click here: [![Listen to Audios](https://img.shields.io/badge/Listen_to_Audios-red?style=for-the-badge&logo=github)](https://karchkha.github.io/Latent-CLAP-subjective-evaluation/)
 
 
 ## Abstract
